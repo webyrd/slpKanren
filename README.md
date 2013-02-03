@@ -11,7 +11,7 @@ slpKanren extends core miniKanren with one relational operator (```condp```) and
 (condp [prob-exp g g* ...] ...)
 ```
 
-```condp``` is identitical to ```conde```, except that the first expression in each clause must evaluate to a non-negative real number representing the probability associated with that clause.
+```condp``` is identitical to ```conde```, except that the first expression in each clause must evaluate to a real number representing the probability associated with that clause.  Operationally, ```condp``` behaves identically to ```conde```, other than associating a probability with each successful clause.  In other words, ```condp``` and ```conde``` produce the same answers, in the same order; however, ```condp``` associates a probility with each answer.
 
 ```
 (run-prob n (x) g0 g ...)

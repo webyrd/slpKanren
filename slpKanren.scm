@@ -1,6 +1,6 @@
-;;; SLP-style probabilistic logic programming in miniKanren,
-;;; based on Stephen Muggleton's paper, 'Stochastic Logic Programs'
-;;; www.doc.ic.ac.uk/~shm/Papers/slp.pdf
+;;; Stochastic Logic Programs (SLP) style probabilistic logic programming in miniKanren,
+;;; based on Stephen Muggleton's paper, 'Stochastic Logic Programs':
+;;; http://www.doc.ic.ac.uk/~shm/Papers/slp.pdf
 
 ;;; Code by Rebecca Swords and William E. Byrd, based on core miniKanren.
 
@@ -11,8 +11,12 @@
 ;;; (condp [prob-exp g g* ...] ...)
 ;;;
 ;;; condp is identitical to conde, except that the first expression in
-;;; each clause must evaluate to a non-negative real number
-;;; representing the probability associated with that clause.
+;;; each clause must evaluate to a real number representing the
+;;; probability associated with that clause.  Operationally, condp
+;;; behaves identically to conde, other than associating a probability
+;;; with each successful clause.  In other words, condp and conde
+;;; produce the same answers, in the same order; however, condp
+;;; associates a probility with each answer.
 ;;;
 ;;;
 ;;; (run-prob n (x) g0 g ...)
