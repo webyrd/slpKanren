@@ -67,8 +67,6 @@ and associated test cases:
     ((a b b b c) . 0.03528)))
 ```
 
-and
-
 ```    
 (test "sa-2"
   (run-prob 1 (q) (== '(a b b c) q) (sa q))
