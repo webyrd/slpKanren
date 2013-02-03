@@ -65,8 +65,14 @@ and associated test cases:
     ((b b b b b b c) . 0.03025259999999999)
     ((a a b c) . 0.0288)
     ((a b b b c) . 0.03528)))
+```
 
+and
+
+```    
 (test "sa-2"
   (run-prob 1 (q) (== '(a b b c) q) (sa q))
   `(((a b b c) . ,(* 0.4 0.6 0.7 0.3))))
 ```
+
+All Scheme code tested under Petite Chez Scheme Version 8.4.
